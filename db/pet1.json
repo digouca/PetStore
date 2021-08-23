@@ -1,0 +1,18 @@
+{
+  "id": 19810205,
+  "category": {
+    "id": 1,
+    "name": "dog"
+  },
+  "name": "Laika",
+  "photoUrls": [
+    "string"
+  ],
+  "tags": [
+    {
+      "id": 2021,
+      "name": "sta"
+    }
+  ],
+  "status": "available"
+}
