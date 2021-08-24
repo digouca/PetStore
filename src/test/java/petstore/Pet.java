@@ -10,8 +10,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.is;
 
-//3 - Calsse
+//3 - Classe
 public class Pet {
     //3.1 - Atributos
     String uri = "https://petstore.swagger.io/v2/pet"; // endereço da entidade Pet
@@ -39,6 +41,10 @@ public class Pet {
         .then() // Então
                 .log().all()
                 .statusCode(200)
+                .body("name", is("Laika"))
+                .body("status", is("available"))
+                .body("category.name", is("dog"))
+                .body("tags.name", contains("sta"))
         ;
 
     }
